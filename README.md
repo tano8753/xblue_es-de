@@ -1,8 +1,6 @@
 # xblue_es-de
 ES-DE frontend install scripts for Raspberry Pi OS (CM5)
 
-Here is full document of ES-DE Frontend: https://gitlab.com/es-de/emulationstation-de/-/blob/master/INSTALL.md#building-on-unix
-
 I Just want to make it easier for everyone to install ES-DE Frontend on top of Raspberry Pi CM5 or Raspberry Pi 5.
 This frontend is very nice 😍
 
@@ -64,3 +62,5 @@ Finally, Press ctrl+o to save file And ctrl+x to exit.
 Done! Now you can start ES-DE frontend on top of the desktop.
 
 It will look like you power up the handheld console 😊
+
+Full document of ES-DE Frontend: https://gitlab.com/es-de/emulationstation-de/-/blob/master/INSTALL.md#building-on-unix
