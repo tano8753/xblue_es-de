@@ -37,6 +37,27 @@ After install, you will see the icon on the system menu. Games > ES-DE
 
 # Start up ES-DE frontend on top of Raspberry Pi OS
 
+## 1. Create autostart folder in .config folder
+```bash
+mkdir ~/.config/autostart
+cd ~/.config/autostart
+```
 
+## 2. Create autostart folder in .config folder
+```bash
+nano ~/.config/autostart/es-de.desktop
+```
 
-Finally, Press ctrl+o to save file.
+## 3. Paste the content below
+```bash
+[Desktop Entry]
+Type=Application
+Name=ES-DE Frontend
+Exec=es-de
+```
+
+Finally, Press ctrl+o to save file And ctrl+x to exit.
+
+Done! Now you can start ES-DE frontend on top of the desktop.
+
+It will look like you power up the handheld console 😊
