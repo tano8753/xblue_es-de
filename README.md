@@ -52,7 +52,7 @@ cd ~/.config/autostart
 nano ~/.config/autostart/es-de.desktop
 ```
 
-## Paste the content below
+## Paste the below content
 ```bash
 [Desktop Entry]
 Type=Application
