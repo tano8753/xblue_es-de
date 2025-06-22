@@ -5,6 +5,8 @@ Here is full document of ES-DE Frontend: https://gitlab.com/es-de/emulationstati
 
 I Just want to make it easier for everyone to install ES-DE Frontend on top of Raspberry Pi CM5 or Raspberry Pi 5.
 
+![Photo](photo.png)
+
 ---------------------------------------------------------------------------------------------------------------------------------
 
 # How to setup
