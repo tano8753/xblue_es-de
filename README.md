@@ -1,5 +1,5 @@
 # xblue_es-de
-ES-DE frontend install scripts for Raspberry Pi OS CM5
+ES-DE frontend install scripts for Raspberry Pi OS (CM5)
 
 Here is full document of ES-DE Frontend: https://gitlab.com/es-de/emulationstation-de/-/blob/master/INSTALL.md#building-on-unix
 
