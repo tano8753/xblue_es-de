@@ -47,7 +47,7 @@ mkdir ~/.config/autostart
 cd ~/.config/autostart
 ```
 
-## Create autostart folder in .config folder
+## Create es-de.desktop in autostart folder
 ```bash
 nano ~/.config/autostart/es-de.desktop
 ```
