@@ -2,6 +2,7 @@
 ES-DE frontend install scripts for Raspberry Pi OS (CM5)
 
 I Just want to make it easier for everyone to install ES-DE Frontend on top of Raspberry Pi CM5 or Raspberry Pi 5.
+
 This frontend is very nice 😍
 
 [Buy me a coffee](https://buymeacoffee.com/xblue_diy)
