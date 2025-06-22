@@ -11,24 +11,24 @@ I Just want to make it easier for everyone to install ES-DE Frontend on top of R
 
 # How to setup
 
-## 1. Install libraries
+## Install libraries
 ```bash
 sudo apt-get install build-essential clang-format git cmake gettext libharfbuzz-dev libicu-dev libsdl2-dev libavcodec-dev libavfilter-dev libavformat-dev libavutil-dev libfreeimage-dev libfreetype6-dev libgit2-dev libcurl4-openssl-dev libpugixml-dev libasound2-dev libbluetooth-dev libgl1-mesa-dev libpoppler-cpp-dev
 ```
 
-## 2. Clone the source
+## Clone the source
 ```bash
 git clone https://gitlab.com/es-de/emulationstation-de.git
 cd emulationstation-de
 ```
 
-## 3. Build the source
+## Build the source
 ```bash
 cmake .
 make -j8
 ```
 
-## 4. Install the app
+## Install the app
 ```bash
 sudo make install
 ```
@@ -39,18 +39,18 @@ After install, you will see the icon on the system menu. Games > ES-DE
 
 # Start up ES-DE frontend on top of Raspberry Pi OS
 
-## 1. Create autostart folder in .config folder
+## Create autostart folder in .config folder
 ```bash
 mkdir ~/.config/autostart
 cd ~/.config/autostart
 ```
 
-## 2. Create autostart folder in .config folder
+## Create autostart folder in .config folder
 ```bash
 nano ~/.config/autostart/es-de.desktop
 ```
 
-## 3. Paste the content below
+## Paste the content below
 ```bash
 [Desktop Entry]
 Type=Application
