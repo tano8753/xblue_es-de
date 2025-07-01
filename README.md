@@ -83,12 +83,20 @@ mkdir ~/ES-DE/scripts/game-start
 
 ## Create game-start-custom.sh file:
 ```bash
-mkdir ~/ES-DE/scripts/game-start/game-start-custom.sh
+nano ~/ES-DE/scripts/game-start/game_start_custom.sh
 ```
 
 ## Paste the content below:
 ```bash
+#!/bin/bash
+systems=("Nintendo DS" "Nintendo 3DS")
 
+for system in "${systems[@]}"; do
+    if [ "$4" == "$system" ]; 
+    then
+        ( sleep 0.5 && wlr-randr --output HDMI-A-1 --transform 90 ) &
+    fi
+done
 ```
 
 Then Ctrl + o to save file And Ctrl + x to exit.
@@ -102,10 +110,19 @@ mkdir ~/ES-DE/scripts/game-end
 
 ## Create game-start-custom.sh file:
 ```bash
-mkdir ~/ES-DE/scripts/game-end/game-end-custom.sh
+nano ~/ES-DE/scripts/game-end/game_end_custom.sh
 ```
 
 ## Paste the content below:
 ```bash
+#!/bin/bash
+systems=("Nintendo DS" "Nintendo 3DS")
 
+for system in "${systems[@]}"; do
+    if [ "$4" == "$system" ]; 
+    then
+        wlr-randr --output HDMI-A-1 --transform normal
+    fi
+done
 ```
+That's all, Hope everyone enjoy this guide ☺️
