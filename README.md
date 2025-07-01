@@ -11,7 +11,7 @@ This frontend is very nice 😍
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
-# How to setup
+# 1. How to setup
 
 ## Install libraries
 ```bash
@@ -39,7 +39,7 @@ After install, you will see the icon on the system menu. Games > ES-DE
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
-# Start up ES-DE frontend on top of Raspberry Pi OS
+# 2. Start up ES-DE frontend on top of Raspberry Pi OS
 
 ## Create autostart folder in .config folder
 ```bash
@@ -67,3 +67,41 @@ Done! Now you can start ES-DE frontend on top of the desktop.
 It will look like you power up the handheld console 😊
 
 Full document of ES-DE Frontend: https://gitlab.com/es-de/emulationstation-de/-/blob/master/INSTALL.md#building-on-unix
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+# 3. Auto rotate the screen 90 degree when play NDS or N3DS
+
+## Create game-start folder under ES-DE folder
+```bash
+mkdir ~/ES-DE/scripts/game-start
+```
+
+## Create game-start-custom.sh file:
+```bash
+mkdir ~/ES-DE/scripts/game-start/game-start-custom.sh
+```
+
+## Paste the content below:
+```bash
+
+```
+
+Then Ctrl + o to save file And Ctrl + x to exit.
+
+To rotate the screen back after exit game we need to trigger game-end event.
+
+## Create game-end folder under ES-DE folder
+```bash
+mkdir ~/ES-DE/scripts/game-end
+```
+
+## Create game-start-custom.sh file:
+```bash
+mkdir ~/ES-DE/scripts/game-end/game-end-custom.sh
+```
+
+## Paste the content below:
+```bash
+
+```
