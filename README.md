@@ -108,7 +108,7 @@ To rotate the screen back after exit game we need to trigger game-end event.
 mkdir ~/ES-DE/scripts/game-end
 ```
 
-## Create game-start-custom.sh file:
+## Create game-end-custom.sh file:
 ```bash
 nano ~/ES-DE/scripts/game-end/game_end_custom.sh
 ```
@@ -125,4 +125,4 @@ for system in "${systems[@]}"; do
     fi
 done
 ```
-That's all, Hope everyone enjoy this guide ☺️
+That's all, Hope you enjoy this guide ☺️
