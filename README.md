@@ -135,11 +135,32 @@ I know that this frontend already support it. But you need to enable the setting
 
 So I create this code to add the shutdown button on the main menu to shutdown it quickly 🙃
 
-## Create game-start folder under ES-DE folder
+## Add the code below before the line addChild(&mMenu); of GuiMenu.cpp
 ```c++
-public function shutdown_system(){
-
+// xblue: custom code
+addEntry(_("SHUTDOWN SYSTEM"), mMenuColorPrimary, false, [this] { shutdownSystem(); });
+```
+## Add the function below before the line GuiMenu::~GuiMenu() of GuiMenu.cpp
+```c++
+// xblue: custom code
+void GuiMenu::shutdownSystem()
+{
+    mWindow->pushGui(new GuiMsgBox(
+        _("REALLY SHUTDOWN SYSTEM?"), _("YES"),
+        [this] {
+            if (Utils::Platform::quitES(Utils::Platform::QuitMode::POWEROFF) != 0) {
+                LOG(LogWarning) << "Power off terminated with non-zero result!";
+            }
+        },
+        _("NO"), nullptr));
 }
 ```
+## Add the code below before the line void openQuitMenu(); of GuiMenu.h
+```c++
+// xblue: custom code
+void shutdownSystem();
+```
+
+Then go back to the build the source, install the app step.
 
 That's all, Hope you enjoy this guide ☺️
