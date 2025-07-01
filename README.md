@@ -9,6 +9,10 @@ This frontend is very nice 😍
 
 ![Photo](photo.png)
 
+1. [How to setup](#1-how-to-setup)
+2. [Start up ES-DE frontend on top of Raspberry Pi OS](#2-start-up-es-de-frontend-on-top-of-raspberry-pi-os)
+3. [Auto rotate the screen 90 degree when play NDS or N3DS](#3-auto-rotate-the-screen-90-degree-when-play-nds-or-n3ds)
+
 ---------------------------------------------------------------------------------------------------------------------------------
 
 # 1. How to setup
