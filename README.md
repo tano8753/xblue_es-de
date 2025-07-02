@@ -12,7 +12,7 @@ This frontend is very nice 😍
 1. [How to setup](#1-how-to-setup)
 2. [Start up ES-DE frontend on top of Raspberry Pi OS](#2-start-up-es-de-frontend-on-top-of-raspberry-pi-os)
 3. [Auto rotate the screen 90 degree when play NDS or N3DS](#3-auto-rotate-the-screen-90-degree-when-play-nds-or-n3ds)
-4. [Add shutdown button](#4-add-shutdown-button)
+4. [Add shutdown system to the main menu](#4-add-shutdown-system-to-the-main-menu)
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
@@ -129,7 +129,7 @@ done
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
-# 4. Add shutdown button
+# 4. Add shutdown system to the main menu
 
 I know that this frontend already support it. But you need to enable the setting And press the button 2 times.
 
