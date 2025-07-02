@@ -31,7 +31,7 @@ cd emulationstation-de
 
 ## Build the source
 ```bash
-cmake .
+cmake -DGLES=on .
 make -j8
 ```
 
