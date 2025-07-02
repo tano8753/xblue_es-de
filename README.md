@@ -11,8 +11,8 @@ This frontend is very nice 😍
 
 1. [How to setup](#1-how-to-setup)
 2. [Start up ES-DE frontend on top of Raspberry Pi OS](#2-start-up-es-de-frontend-on-top-of-raspberry-pi-os)
-3. [Auto rotate the screen 90 degree when play NDS or N3DS](#3-auto-rotate-the-screen-90-degree-when-play-nds-or-n3ds)
-4. [Add shutdown system to the main menu](#4-add-shutdown-system-to-the-main-menu)
+3. [Add shutdown system to the main menu](#3-add-shutdown-system-to-the-main-menu)
+4. [Auto rotate the screen 90 degree when play NDS or N3DS](#4-auto-rotate-the-screen-90-degree-when-play-nds-or-n3ds)
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
@@ -75,7 +75,43 @@ Full document of ES-DE Frontend: https://gitlab.com/es-de/emulationstation-de/-/
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Auto rotate the screen 90 degree when play NDS or N3DS
+# 3. Add shutdown system to the main menu
+
+I know that this frontend already support it. But you need to enable the setting And press the button 2 times.
+
+So I create this code to add the shutdown button on the main menu to shutdown it quickly 🙃
+
+## Add the code below before the line addChild(&mMenu); of es-app/src/guis/GuiMenu.cpp file
+```c++
+// xblue: custom code
+addEntry(_("SHUTDOWN SYSTEM"), mMenuColorPrimary, false, [this] { shutdownSystem(); });
+```
+## Add the function below before the line GuiMenu::~GuiMenu() of es-app/src/guis/GuiMenu.cpp file
+```c++
+// xblue: custom code
+void GuiMenu::shutdownSystem()
+{
+    mWindow->pushGui(new GuiMsgBox(
+        _("REALLY SHUTDOWN SYSTEM?"), _("YES"),
+        [this] {
+            if (Utils::Platform::quitES(Utils::Platform::QuitMode::POWEROFF) != 0) {
+                LOG(LogWarning) << "Power off terminated with non-zero result!";
+            }
+        },
+        _("NO"), nullptr));
+}
+```
+## Add the code below after the line void openQuitMenu(); of GuiMenu.h file
+```c++
+// xblue: custom code
+void shutdownSystem();
+```
+
+Then go back to the build the source, install the app step.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+# 4. Auto rotate the screen 90 degree when play NDS or N3DS
 
 ## Create game-start folder under ES-DE folder
 ```bash
@@ -126,41 +162,5 @@ for system in "${systems[@]}"; do
     fi
 done
 ```
-
----------------------------------------------------------------------------------------------------------------------------------
-
-# 4. Add shutdown system to the main menu
-
-I know that this frontend already support it. But you need to enable the setting And press the button 2 times.
-
-So I create this code to add the shutdown button on the main menu to shutdown it quickly 🙃
-
-## Add the code below before the line addChild(&mMenu); of es-app/src/guis/GuiMenu.cpp file
-```c++
-// xblue: custom code
-addEntry(_("SHUTDOWN SYSTEM"), mMenuColorPrimary, false, [this] { shutdownSystem(); });
-```
-## Add the function below before the line GuiMenu::~GuiMenu() of es-app/src/guis/GuiMenu.cpp file
-```c++
-// xblue: custom code
-void GuiMenu::shutdownSystem()
-{
-    mWindow->pushGui(new GuiMsgBox(
-        _("REALLY SHUTDOWN SYSTEM?"), _("YES"),
-        [this] {
-            if (Utils::Platform::quitES(Utils::Platform::QuitMode::POWEROFF) != 0) {
-                LOG(LogWarning) << "Power off terminated with non-zero result!";
-            }
-        },
-        _("NO"), nullptr));
-}
-```
-## Add the code below after the line void openQuitMenu(); of GuiMenu.h file
-```c++
-// xblue: custom code
-void shutdownSystem();
-```
-
-Then go back to the build the source, install the app step.
 
 That's all, Hope you enjoy this guide ☺️
