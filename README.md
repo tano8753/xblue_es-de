@@ -135,12 +135,12 @@ I know that this frontend already support it. But you need to enable the setting
 
 So I create this code to add the shutdown button on the main menu to shutdown it quickly 🙃
 
-## Add the code below before the line addChild(&mMenu); of GuiMenu.cpp file
+## Add the code below before the line addChild(&mMenu); of es-app/src/guis/GuiMenu.cpp file
 ```c++
 // xblue: custom code
 addEntry(_("SHUTDOWN SYSTEM"), mMenuColorPrimary, false, [this] { shutdownSystem(); });
 ```
-## Add the function below before the line GuiMenu::~GuiMenu() of GuiMenu.cpp file
+## Add the function below before the line GuiMenu::~GuiMenu() of es-app/src/guis/GuiMenu.cpp file
 ```c++
 // xblue: custom code
 void GuiMenu::shutdownSystem()
