@@ -5,6 +5,8 @@ I Just want to make it easier for everyone to install ES-DE Frontend on top of R
 
 This frontend is very nice 😍
 
+[See the video on youtube](https://youtu.be/agU4hXt4o2A)
+
 [Buy me a coffee](https://buymeacoffee.com/xblue_diy)
 
 ![Photo](photo.png)
@@ -162,5 +164,7 @@ for system in "${systems[@]}"; do
     fi
 done
 ```
+
+You also need to enable custom script at Main menu > Other settings > Enable custom event scripts
 
 That's all, Hope you enjoy this guide ☺️
